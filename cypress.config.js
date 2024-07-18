@@ -1,4 +1,3 @@
-const { group } = require("console");
 const { defineConfig } = require("cypress");
 const fs = require('fs');
 const path = require('path');
