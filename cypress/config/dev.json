@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:3000/",
+  "validEmail": "qa.reviewer2@gitstart.com",
+  "wrongEmail": "fata@gmail.com",
+  "validPassword": "1234567890",
+  "wrongPassword": "Pillow@123"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "gitstart_frontend_ui_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "CYPRESS_CONFIG_FILE=dev.json npx cypress open",
+    "prod":"CYPRESS_CONFIG_FILE=prod.json npx cypress open",
+    "dev:headless": "CYPRESS_CONFIG_FILE=dev.json npx cypress run --headless",
+    "prod:headless":"CYPRESS_CONFIG_FILE=prod.json npx cypress run --headless"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.0"
+  }
+}
