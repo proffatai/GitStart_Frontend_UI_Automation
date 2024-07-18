@@ -1,15 +1,16 @@
 class LoginPage {
 
-  loginButton = '.border-black';
-  passwordField = 'input[placeholder="password"]';
-  usernameField = 'input[placeholder="name@example.com"]';
-  codeAsService=".text-2xl"
-  message = ".max-w-96"
-  loginMessage=".mx-4"
-  errorMessage=".mt-4"
-  homeLabel=".text-xl"
-  logo=".px-8"
-  groupedBy=".gap-4"
+  // loginButtonLocator = '.border-black';
+  loginButtonLocator=Cypress.env("loginButtonLocator")
+  passwordLocator= 'input[placeholder="password"]';
+  usernameLocator= 'input[placeholder="name@example.com"]';
+  codeAsServiceLocator=".text-2xl"
+  messageLocator = ".max-w-96"
+  loginMessageLocator=".mx-4"
+  errorMessageLocator=".mt-4"
+  homeLabelLocator=".text-xl"
+  logoLocator=".px-8"
+  groupedByLocator=".gap-4"
 
   constructor() {
     this.validEmail = Cypress.env("validEmail");
@@ -23,40 +24,40 @@ class LoginPage {
   }
 
   loginscreenValidation() {
-    cy.get(this.codeAsService).contains("Code as a Service").should("be.visible");
-    cy.get(this.message)
+    cy.get(this.codeAsServiceLocator).contains("Code as a Service").should("be.visible");
+    cy.get(this.messageLocator)
       .contains(
         "We turn your backlog into high-quality production code while growing the next generation of developers."
       )
       .should("be.visible");
-    cy.get(this.loginMessage)
+    cy.get(this.loginMessageLocator)
       .contains("Log in to your GitStart account")
       .should("be.visible");
   }
   clickLoginButton() {
-    cy.get(this.loginButton).click();
+    cy.get(this.loginButtonLocator).click();
   }
 
   enterUsername(username) {
-    cy.get(this.usernameField)
+    cy.get(this.usernameLocator)
       .type(username)
       .should("have.value", username);
   }
 
   enterPassword(password) {
-    cy.get(this.passwordField)
+    cy.get(this.passwordLocator)
       .type(password)
       .should("have.value", password);
   }
 
   checkErrorMessage(message) {
-    cy.get(this.errorMessage).contains(message).should("be.visible");
+    cy.get(this.errorMessageLocator).contains(message).should("be.visible");
   }
 
   checkDashboard() {
-    cy.get(this.homeLabel).contains("Your team's work").should("be.visible");
-    cy.get(this.logo).should("be.visible");
-    cy.get(this.groupedBy).contains("Grouped By").should("be.visible");
+    cy.get(this.homeLabelLocator).contains("Your team's work").should("be.visible");
+    cy.get(this.logoLocator).should("be.visible");
+    cy.get(this.groupedByLocator).contains("Grouped By").should("be.visible");
   }
 
   wait(ms) {
