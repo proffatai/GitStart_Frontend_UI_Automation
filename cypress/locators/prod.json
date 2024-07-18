@@ -1,12 +1,18 @@
 {
-    "loginButtonLocator": ".border-black",
-    "passwordLocator": "input[placeholder=\"password\"]",
-    "usernameLocator": "input[placeholder=\"name@example.com\"]",
-    "codeAsServiceLocator": ".text-2xl",
-    "messageLocator": ".max-w-96",
-    "loginMessageLocator": ".mx-4",
-    "errorMessageLocator": ".mt-4",
-    "homeLabelLocator": ".text-xl",
-    "logoLocator": ".px-8",
-    "groupedByLocator": ".gap-4"
-  }
+  "loginButtonLocator": ".border-black",
+  "passwordLocator": "input[placeholder=\"password\"]",
+  "usernameLocator": "input[placeholder=\"name@example.com\"]",
+  "codeAsServiceLocator": ".text-2xl",
+  "messageLocator": ".max-w-96",
+  "loginMessageLocator": ".mx-4",
+  "errorMessageLocator": ".mt-4",
+  "homeLabelLocator": ".text-xl",
+  "logoLocator": ".px-8",
+  "groupedByLocator": ".gap-4",
+  "instanceLocator": ".mt-8",
+  "groupedByDropdownLocator": "button[id=\"headlessui-listbox-button-:r0:\"]",
+  "currentPasswordLocator": ":nth-child(1) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "newPasswordLocator": ":nth-child(3) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "confirmPasswordLocator": ":nth-child(4) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "saveButtonLocator": ".text-md"
+}

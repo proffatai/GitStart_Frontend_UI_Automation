@@ -1,3 +1,4 @@
+const { group } = require("console");
 const { defineConfig } = require("cypress");
 const fs = require('fs');
 const path = require('path');
@@ -31,7 +32,9 @@ module.exports = defineConfig({
       wrongEmail: configData.wrongEmail,
       validPassword: configData.validPassword,
       wrongPassword: configData.wrongPassword,
-      loginPage:{loginButtonLocator:locatorData.loginButtonLocator,
+      
+      loginPage:{
+        loginButtonLocator:locatorData.loginButtonLocator,
         passwordLocator:locatorData.passwordLocator,
         usernameLocator:locatorData.usernameLocator,
         codeAsServiceLocator:locatorData.codeAsServiceLocator,
@@ -41,9 +44,21 @@ module.exports = defineConfig({
         homeLabelLocator:locatorData.homeLabelLocator,
         logoLocator:locatorData.logoLocator,
         groupedByLocator:locatorData.groupedByLocator
+      },
+      homePage:{
+        instanceLocator:locatorData.instanceLocator,
+        groupedByLocator:locatorData.groupedByLocator,
+        groupedByDropdownLocator:locatorData.groupedByDropdownLocator
+      },
+      settingsPage:{
+        currentPasswordLocator:locatorData.currentPasswordLocator,
+        newPasswordLocator:locatorData.newPasswordLocator,
+        confirmPasswordLocator:locatorData.confirmPasswordLocator,
+        saveButtonLocator:locatorData.saveButtonLocator,
       }
       
     },
     watchForFileChanges: false,
+    defaultCommandTimeout: 10000,
   },
 });

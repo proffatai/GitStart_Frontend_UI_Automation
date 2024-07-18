@@ -10,7 +10,7 @@ describe('Login page', () => {
   let wrongEmail=loginPage.wrongEmail
 
   beforeEach(() => {
-    loginPage.visit(Cypress.env("baseUrl"));
+    loginPage.visit();
     loginPage.loginscreenValidation();
   });
 

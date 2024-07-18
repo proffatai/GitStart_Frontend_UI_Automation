@@ -35,7 +35,6 @@ class LoginPage {
   }
   clickLoginButton() {
     cy.get(this.loginButtonLocator).click();
-    cy.wait(10000)
   }
 
   enterUsername(username) {

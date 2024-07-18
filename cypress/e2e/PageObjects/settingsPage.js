@@ -1,13 +1,11 @@
 import LoginPage from "./loginPage";
 
 class SettingPage extends LoginPage {
-  currentPasswordField =
-    ":nth-child(1) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary";
-  newPasswordField =
-    ":nth-child(3) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary";
-  confirmPasswordField =
-    ":nth-child(4) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary";
-  saveButtonField = ".text-md";
+  settingsPage=Cypress.env("settingsPage");
+  currentPasswordLocator = this.settingsPage.currentPasswordLocator;
+  newPasswordLocator = this.settingsPage.newPasswordLocator;
+  confirmPasswordLocator = this.settingsPage.confirmPasswordLocator;
+  saveButtonLocator = this.settingsPage.saveButtonLocator;
 
   navigateToSettings() {
     cy.contains("Settings").click();
@@ -23,19 +21,19 @@ class SettingPage extends LoginPage {
   }
   
   enterCurrentPassword(currentPassword){
-    cy.get(this.currentPasswordField).type(currentPassword);
+    cy.get(this.currentPasswordLocator).type(currentPassword);
   }
 
   enterNewPassword(newPassword){
-    cy.get(this.newPasswordField).type(newPassword);
+    cy.get(this.newPasswordLocator).type(newPassword);
   }
 
   enterConfirmPassword(confirmPassword){
-    cy.get(this.confirmPasswordField).type(confirmPassword);
+    cy.get(this.confirmPasswordLocator).type(confirmPassword);
   }
 
   clickSaveButton() {
-    cy.get(this.saveButtonField).should("be.enabled").click();
+    cy.get(this.saveButtonLocator).should("be.enabled").click();
   }
 
   checkErrorMessage(message) {

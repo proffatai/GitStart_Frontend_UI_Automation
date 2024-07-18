@@ -8,5 +8,11 @@
   "errorMessageLocator": ".mt-4",
   "homeLabelLocator": ".text-xl",
   "logoLocator": ".px-8",
-  "groupedByLocator": ".gap-4"
+  "groupedByLocator": ".gap-4",
+  "instanceLocator": ".mt-8",
+  "groupedByDropdownLocator": "button[id=\"headlessui-listbox-button-:r1:\"]",
+  "currentPasswordLocator": ":nth-child(1) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "newPasswordLocator": ":nth-child(3) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "confirmPasswordLocator": ":nth-child(4) > .mt-2 > :nth-child(1) > .text-accented > .border-borderSecondary",
+  "saveButtonLocator": ".text-md"
 }
