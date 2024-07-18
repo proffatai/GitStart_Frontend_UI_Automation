@@ -19,7 +19,6 @@ describe('Login page', () => {
     loginPage.enterUsername(validEmail);
     loginPage.enterPassword(validPassword);
     loginPage.clickLoginButton();
-    loginPage.wait(5000);
     loginPage.checkDashboard();
   });
 

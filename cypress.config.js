@@ -31,8 +31,18 @@ module.exports = defineConfig({
       wrongEmail: configData.wrongEmail,
       validPassword: configData.validPassword,
       wrongPassword: configData.wrongPassword,
+      loginPage:{loginButtonLocator:locatorData.loginButtonLocator,
+        passwordLocator:locatorData.passwordLocator,
+        usernameLocator:locatorData.usernameLocator,
+        codeAsServiceLocator:locatorData.codeAsServiceLocator,
+        messageLocator:locatorData.messageLocator,
+        loginMessageLocator:locatorData.loginMessageLocator,
+        errorMessageLocator:locatorData.errorMessageLocator,
+        homeLabelLocator:locatorData.homeLabelLocator,
+        logoLocator:locatorData.logoLocator,
+        groupedByLocator:locatorData.groupedByLocator
+      }
       
-      loginButtonLocator:locatorData.loginButtonLocator
     },
     watchForFileChanges: false,
   },
