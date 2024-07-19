@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://developers.gitstart.com/",
-  "validEmail": "fatai.ibrahim@gitstart.dev",
+  "validEmail": "",
   "wrongEmail": "fata@gmail.com",
-  "validPassword": "Pile@aug2023",
+  "validPassword": "",
   "wrongPassword": "Pillow@123"
 }
